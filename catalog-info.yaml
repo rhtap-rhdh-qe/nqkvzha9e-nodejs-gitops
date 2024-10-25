@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: nqkvzha9e-nodejs-gitops
+  description: This is GitOps manifest for nqkvzha9e-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: nqkvzha9e-nodejs
+    janus-idp.io/tekton: nqkvzha9e-nodejs
+    backstage.io/kubernetes-id: nqkvzha9e-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:nqkvzha9e-nodejs
